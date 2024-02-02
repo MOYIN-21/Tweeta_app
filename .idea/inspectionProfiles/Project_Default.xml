@@ -1,0 +1,47 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="49" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N806" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Corn_flakes.MBTI_TEST.re" />
+          <option value="datetime.datetime.*" />
+          <option value="list.deposit" />
+          <option value="list.check_balance" />
+          <option value="list.withdraw" />
+          <option value="str.get_account_number" />
+          <option value="str.withdraw" />
+          <option value="str.deposit" />
+          <option value="str.check_balance" />
+          <option value="emp.test_employee.test_employee.employee" />
+          <option value="int.__getitem__" />
+          <option value="testrun.math_func" />
+          <option value="my_class.diary_app.main.my_diary" />
+          <option value="Class_chinchin.JonathanFirstClass.*" />
+          <option value="my_class.BankApp.bank.BankApp" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -14,6 +14,6 @@ class TweetAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class Admin(admin.ModelAdmin):
-    list_display = ['comment', 'commented_on', 'id']
+    list_display = ['comment', 'commented_on', 'tweet', 'id']
 
 

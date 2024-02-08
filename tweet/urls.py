@@ -1,10 +1,14 @@
 from django.urls import path, include
+from rest_framework import routers
 from rest_framework.routers import SimpleRouter
 from . import views
+from .views import CommentViewSet
 
 router = SimpleRouter()
-router.register("t", views.TweetViewSet)
-router.register("comments", views.CommentViewSet)
+router.register("tweets", views.TweetViewSet, basename='tweets')
+
+comment_router = (routers.NestedDefaultRouter(router, "tweets", lookup ="tweet"))
+comment_router.register("comments", CommentViewSet, basename="tweets-comments")
 
 
 # urlpatterns = [
@@ -17,5 +21,5 @@ router.register("comments", views.CommentViewSet)
 
 # ]
 
-urlpatterns = router.urls
+urlpatterns = router.urls + comment_router.urls
 # print(router.urls)

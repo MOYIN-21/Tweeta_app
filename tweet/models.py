@@ -15,4 +15,7 @@ class Tweet(models.Model):
 class Comment(models.Model):
     comment = models.CharField(max_length=100)
     commented_on = models.DateTimeField(auto_now_add=True)
-    tweet = models.ForeignKey(Tweet, on_delete=models.CASCADE)
+    tweet = models.ForeignKey(Tweet, on_delete=models.CASCADE, related_name='tweet_comments')
+
+    def __str__(self):
+        return self.comment

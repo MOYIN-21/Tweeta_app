@@ -40,8 +40,12 @@ class TweetViewSet(ModelViewSet):
     serializer_class = TweetSerializer
 
 class CommentViewSet(ModelViewSet):
-    queryset = Comment.objects.all()
+    # queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+    def get_queryset(self):
+        queryset = Comment.objects.select_related("twwet").filter(tweet_id=self.kwargs['tweet_pk'])
+        return queryset
 
 # class TweetList(ListCreateAPIView):
 #     queryset = Tweet.objects.all()

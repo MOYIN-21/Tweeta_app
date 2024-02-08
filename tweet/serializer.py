@@ -4,9 +4,9 @@ from tweet.models import Tweet, Comment
 
 
 class TweetSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(read_only=True)
+    # id = serializers.IntegerField(read_only=True)
     # text = serializers.CharField(max_length=200)
-    last_update = serializers.DateTimeField(read_only=True)
+    # last_update = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Tweet
@@ -14,6 +14,7 @@ class TweetSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
     class Meta:
         model = Comment
         fields = ['id', 'comment', 'commented_on', 'tweet']
